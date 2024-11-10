@@ -1,0 +1,63 @@
+/*CSS style sheet*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    background-color: rgb(126, 126, 126);
+}
+/*home page grid CSS*/
+.grid_section {
+    display: grid;
+    width: 100vw;
+
+/*look up grids for better layout*/
+    grid-template-columns: max-content;
+    grid-template-rows: auto;
+/*^^^*/    
+    padding: 0;
+    margin: 0;
+    row-gap: 3px;
+}
+
+.main_header{
+    grid-row: span 1;
+    grid-column: span 5;
+    text-align: center;
+    background-color: rgb(25, 25, 50);
+    color: #dad3d3;
+}
+
+nav {
+    width: 150px;
+    background-color: black;
+    align-items: flex-start;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+.main_img {
+    display:block;
+    grid-column: span 3;
+}
+
+.home_content {
+    grid-column: span 1;
+    gap: 3px;
+    background-color: rgba(35, 35, 138, 0.342);
+}
+
+footer {
+    grid-area: footer;
+    grid-column: span 5;
+    background-color: rgb(25, 25, 50);
+    color: #dad3d3;
+}
+
+/*end of home page CSS*/
