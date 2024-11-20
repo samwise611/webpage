@@ -3,16 +3,18 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     background-color: rgb(126, 126, 126);
+    margin: 0;
+    padding: 0;
 }
 /*home page grid CSS*/
 .grid_section {
     display: grid;
     width: 100vw;
 
-/*look up grids for better layout*/
+/*not best practice, but works for basic layout*/
     grid-template-columns: max-content;
-    grid-template-rows: auto;
-/*^^^*/    
+    grid-template-rows: auto;   
+/*^^^^*/
     padding: 0;
     margin: 0;
     row-gap: 3px;
@@ -44,16 +46,16 @@ nav li {
 
 .main_img {
     display:block;
-    grid-column: span 3;
+    grid-column: span 2;
 }
 
 .home_content {
-    grid-column: span 1;
+    grid-column: auto;
     gap: 3px;
     background-color: rgba(35, 35, 138, 0.342);
 }
 
-footer {
+.home_footer {
     grid-area: footer;
     grid-column: span 5;
     background-color: rgb(25, 25, 50);
@@ -61,3 +63,190 @@ footer {
 }
 
 /*end of home page CSS*/
+
+/*alt style nav bar used on gallery page*/
+
+.alt_nav ul{
+    top: 0;
+    position: absolute;
+    padding-top: 0;
+    padding-bottom: 13px;
+    margin-top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.661);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alt_nav ul li{
+    display: inline;
+    margin-inline-start: 20px;
+}
+
+.alt_nav a {
+    transition: colour 3s, border-bottom 0.3s;
+    transition-delay: 0.2s;
+}
+
+.alt_nav a:hover{
+    color: #42428c;
+    border-bottom: 2px solid wheat;
+}
+
+/*create alt footer for gallery & form page*/
+
+/*gallery CSS*/
+
+#rainbow{
+    margin-top: 40px;
+    display: flex;
+    max-width: 100vw;
+    position: relative;
+    align-items: top;
+    justify-content: center;
+    
+}
+
+.fig_box {
+    margin: 1px;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    padding: 3px;
+}
+
+/*CSS overlay & text for 1st gallery section*/
+.img_overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008bba28;
+}
+
+.fig_box:hover .img_overlay{
+    opacity: 1;
+    transition-duration: 5s ease-in-out;
+} 
+
+.overlay_text{
+    color: rgb(235, 255, 245);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition-duration: 5s;
+}
+
+/*2nd gallery section CSS*/
+.container_2{
+    position: relative;
+    max-width: fit-content;
+    left: 25%;
+}
+
+.sunrise{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 8px solid #0a1d23;
+    box-shadow: 0px 0px 20px rgba(212, 70, 94, 0.789);
+}
+
+/*gallery buttons*/
+.g_button{
+    position: relative;
+    left: 50%;
+    max-width: fit-content;
+}
+
+.g_button a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: beige;
+}
+
+.g_button button{
+    background-color: #0a1d23;
+    border:solid 1px rgb(126, 126, 126);
+    border-radius: 3%;
+    transition: 1s;
+}
+
+.g_button button:hover{
+    background-color: beige;
+    border: 1px solid #0a1d23;
+}
+
+.g_button a:hover{
+    color: #0a1d23;
+}
+
+
+/*map page CSS*/
+.map_page{
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: auto;
+}
+
+.map_header{
+    grid-column: span 5;
+    grid-row: span 1;
+    align-items: start;
+    background-color: #0a1d23;
+    color: #dad3d3;
+}
+
+.b1{
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    align-self: center;
+}
+
+/*form page CSS*/
+
+.two_col{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sec_col{
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 20px;
+    border: solid 3px rgb(19, 32, 133);
+    margin-left: 3px;
+    background-color: rgba(255, 228, 196, 0.813);
+}
+
+.text_box{
+    padding-left: 10px;
+    align-self: center;
+}
+
+#user_msg{
+    width: 600px;
+    height: 150px;
+    resize: none;
+    float: right;
+    
+}
+
+form ::placeholder{
+    color: brown;
+}

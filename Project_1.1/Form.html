@@ -2,12 +2,54 @@
 <html>
 <head>
     <title>Home page</title>
-    <link rel="style_sheet" href="CSS/style_sheet.css">
+    <link rel="stylesheet" href="CSS/style_sheet.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=divice-width, intial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <h1>Contact form</h1>
+    <!--2 col nav & form-->
+<section class="two_col">
+    <div class="first_col">    
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li><br>
+                <li><a href="Gallery.html">Gallery</a></li><br>
+                <li><a href="Map.html">Map</a></li><br>
+                <li><a href="Form.html">Form</a></li><br>
+            </ul>
+        </nav>
+    </div>
+<!--look into php to store form info. PHP page created learn how it works.-->
+    <div class="sec_col">
+        <form action="PHP/form_page.php" id="user_form">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="required" required><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <input type="submit" value="Submit" form="user_form">
+        </form>
+        <br>
+        <div class="text_box">
+            <textarea name="comment" form="user_form" id="user_msg" placeholder="Your message here..."></textarea><br>       
+    
+        </div>
+    </div>
+</section>
+    <footer>
+        <div class="socialmedia">
+            <ul>
+                <li><a href="http://www.google.com" class="fa fa-google" target="_blank"></a></li>
+                <li><a href="http://www.instagram.com/samwise61/" class="fa fa-instagram" target="_blank"></a></li>
+                <li><a href="http://github.com/samwise611" class="fa fa-github" target="_blank"></a></li>
+            </ul>
+        </div>
+        <p>Created by Sam H 2024.</p>
+    </footer>
 
 </body>
 </html>

@@ -1,29 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home page</title>
-    <link rel="style_sheet" href="CSS/style_sheet.css">
+    <title>Gallery page</title>
+    <link rel="stylesheet" href="CSS/style_sheet.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=divice-width, intial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="Home.html">Home</a></li><br>
-            <li><a href="Gallery.html">Gallery</a></li><br>
-            <li><a href="Map.html">Map</a></li><br>
-            <li><a href="Form.html">Form</a></li><br>
-        </ul>
-    </nav>
-<section class="img_gallery">
-    <gallery>
-        <img src="images/gallery_1.jpg" alt="image 1" class="gallery_1">
-        <img src="images/gallery_2.jpg" alt="image 2" class="gallery_2">
-        <img src="images/gallery_3.jpg" alt="image 3" class="gallery_3">
-        <img src="images/gallery_4.jpg" alt="image 4" class="gallery_4">
-    </gallery>
+    <!--alt stlye nav bar-->
+    <div class="alt_nav">     
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li><br>
+                <li><a href="Gallery.html">Gallery</a></li><br>
+                <li><a href="Map.html">Map</a></li><br>
+                <li><a href="Form.html">Form</a></li><br>
+            </ul>
+        </nav>
+    </div>
+<!--gallery section-->
+<section id="gallery">
+    <div id="rainbow">
+        <figure class="fig_box">
+            <img src="images/gallery_3.jpg" alt="rainbow">
+            <div class="img_overlay">
+                <div class="overlay_text">Welcome to my Gallery page, here is a collection of photos I have taken. Using CSS to further design the page.</div>
+            </div>
+        </figure>
+        <figure class="fig_box">
+            <img src="images/gallery_4.jpg" alt="rainbow">
+        </figure>
+        <figure class="fig_box">
+            <img src="images/gallery_1.jpg" alt="rainbow">
+        </figure>
+        <figure class="fig_box">
+            <img src="images/gallery_2.jpg" alt="rainbow">
+        </figure>
+    </div>
 </section>
+<hr>
+<section class="container_2">
+    <figure>
+        <img class="sunrise" src="images/sunrise.jpg" alt="sun rise">
+    </figure>
+</section>
+<hr>
+<br>
+
+<div class="g_button">
+<!--buttons as nav function at bottom of page-->
+    <button type="button"><a href="Home.html">Home</a></button>
+    <button type="button"><a href="Gallery.html">Gallery</a></button>
+    <button type="button"><a href="Map.html">Map</a></button>
+    <button type="button"><a href="Form.html">Form</a></button>
+</div>
+
+<footer>
+    <div class="socialmedia">
+        <ul>
+            <li><a href="http://www.google.com" class="fa fa-google" target="_blank"></a></li>
+            <li><a href="http://www.instagram.com/samwise61/" class="fa fa-instagram" target="_blank"></a></li>
+            <li><a href="http://github.com/samwise611" class="fa fa-github" target="_blank"></a></li>
+        </ul>
+    </div>
+    <p>Created by Sam H 2024.</p>
+</footer>
 
 </body>
 </html>
