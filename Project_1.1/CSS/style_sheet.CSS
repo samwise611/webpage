@@ -26,7 +26,11 @@ body {
     text-align: center;
     background-color: rgb(25, 25, 50);
     color: #dad3d3;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 5px;
 }
+
 
 nav {
     width: 150px;
@@ -38,6 +42,10 @@ nav a {
     text-decoration: none;
     color: aliceblue;
     align-items: center;
+}
+
+nav a:hover{
+    text-decoration: underline aliceblue;
 }
 
 nav li {
@@ -60,6 +68,31 @@ nav li {
     grid-column: span 5;
     background-color: rgb(25, 25, 50);
     color: #dad3d3;
+}
+
+/*footer social media links*/
+.socialmedia ul{
+    list-style: none;
+}
+
+.socialmedia li{
+    display: inline;
+    padding-inline-end: 10px;
+}
+
+.socialmedia a{
+    text-decoration: none;
+    color: #dad3d3;
+    font-size: 70px;
+    transition: 0.4s;
+    padding-left: 2px;
+    padding-right: 2px; 
+}
+
+.socialmedia a:hover{
+    background-color: #dad3d3;
+    color: rgb(25, 25, 50);
+    border-radius: 10%;
 }
 
 /*end of home page CSS*/
@@ -138,15 +171,15 @@ nav li {
 
 .overlay_text{
     color: rgb(235, 255, 245);
-  font-size: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  transition-duration: 5s;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition-duration: 5s;
 }
 
 /*2nd gallery section CSS*/
@@ -198,7 +231,7 @@ nav li {
 /*map page CSS*/
 .map_page{
     display: grid;
-    grid-template-columns: max-content;
+    grid-template-columns: span 3;
     grid-template-rows: auto;
 }
 
@@ -210,11 +243,15 @@ nav li {
     color: #dad3d3;
 }
 
-.b1{
+.bris1{
     padding: 0;
     margin: 0;
-    width: 50%;
     align-self: center;
+    
+}
+
+.b1{
+    width: 50%;
 }
 
 /*form page CSS*/
